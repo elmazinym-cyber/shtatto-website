@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHTATTO' — Restaurant & Concept Store in the Medina of Marrakech</title>
+<meta name="description" content="Shtatto' — a first concept store of Marrakech's Medina, a couple of steps away from the Place des Épices. Traditional Moroccan food, fresh juices, rooftop sunsets. Reserve your table.">
+<meta property="og:title" content="SHTATTO' — Medina of Marrakech">
+<meta property="og:description" content="Traditional Moroccan kitchen, fresh juices & rooftop sunsets — steps from the Place des Épices.">
+<meta property="og:image" content="assets/img/rooftop-sunset.jpg">
+<meta property="og:type" content="restaurant">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%231a1a1a' fill-rule='evenodd' d='M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Amiri:ital@0;1&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "SHTATTO'",
+  "image": "assets/img/rooftop-sunset.jpg",
+  "description": "A first concept store of Marrakech's Medina — traditional Moroccan food, fresh juices and rooftop sunsets, a couple of steps away from the Place des Épices.",
+  "servesCuisine": ["Moroccan", "Mediterranean"],
+  "priceRange": "20–120 MAD",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Medina, Marrakech",
+    "addressCountry": "MA"
+  },
+  "url": "https://booking.shtattomarrakech.com/reservation",
+  "sameAs": ["https://www.instagram.com/shtattomarrakech/"]
+}
+</script>
+</head>
+<body>
+
+<!-- ======= Preloader ======= -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <svg class="preloader__mark" viewBox="0 0 100 100">
+      <path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/>
+    </svg>
+    <span class="preloader__word">Shtatto'&#8206;</span>
+  </div>
+</div>
+
+<!-- ======= Scroll progress ======= -->
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<!-- ======= Header ======= -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#top" class="brand" aria-label="Shtatto home">
+      <svg class="brand__mark" viewBox="0 0 100 100" aria-hidden="true">
+        <path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/>
+      </svg>
+      <span class="brand__word">Shtatto<em>'&#8206;</em></span>
+    </a>
+
+    <nav class="nav" id="nav" data-i18n-aria="nav.aria" aria-label="Main navigation">
+      <a href="#story" class="nav__link" data-i18n="nav.story">Our story</a>
+      <a href="#dishes" class="nav__link" data-i18n="nav.dishes">Signature dishes</a>
+      <a href="#menu" class="nav__link" data-i18n="nav.menu">Menu</a>
+      <a href="#gallery" class="nav__link" data-i18n="nav.gallery">Gallery</a>
+      <a href="#visit" class="nav__link" data-i18n="nav.visit">Visit us</a>
+      <a href="https://booking.shtattomarrakech.com/reservation" target="_blank" rel="noopener" class="btn btn--small nav__cta" data-i18n="nav.reserve">Reserve a table</a>
+    </nav>
+
+    <div class="header__actions">
+      <div class="lang" id="lang">
+        <button class="lang__btn" id="langBtn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
+          <span class="lang__flag" id="langFlag" aria-hidden="true"></span>
+          <span id="langLabel">EN</span>
+          <svg class="lang__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="lang__menu" id="langMenu" role="listbox" hidden></ul>
+      </div>
+
+      <button class="burger" id="burger" data-i18n-aria="ui.burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ======= Hero ======= -->
+<section class="hero" id="top">
+  <div class="hero__pattern" data-par="0.12" aria-hidden="true"></div>
+  <div class="hero__dust" id="heroDust" aria-hidden="true"></div>
+  <div class="container hero__inner">
+    <div class="hero__text">
+      <p class="hero__arabic" lang="ar" dir="rtl">أهلاً وسهلاً</p>
+      <p class="hero__kicker" data-i18n="hero.kicker">Medina · Marrakech</p>
+      <h1 class="hero__title">Shtatto<em>'&#8206;</em></h1>
+      <p class="hero__tagline" data-i18n-html="hero.tagline">A first concept store of Marrakech's Medina — a couple of steps away from the <strong>Place des Épices</strong>. Traditional Moroccan soul, fresh ingredients, and rooftop sunsets.</p>
+      <div class="hero__actions">
+        <a href="https://booking.shtattomarrakech.com/reservation" target="_blank" rel="noopener" class="btn btn--solid" data-i18n="hero.cta1">Reserve a table</a>
+        <a href="#menu" class="btn btn--ghost" data-i18n="hero.cta2">Explore the menu</a>
+      </div>
+      <ul class="hero__badges" aria-label="Highlights">
+        <li data-i18n="hero.b1">Rooftop views</li>
+        <li data-i18n="hero.b2">Fresh daily</li>
+        <li data-i18n="hero.b3">Veggie &amp; vegan friendly</li>
+      </ul>
+    </div>
+
+    <div class="hero__visual" data-par="0.05">
+      <div class="arch arch--hero">
+        <img src="assets/img/rooftop-sunset.jpg" data-i18n-alt="hero.alt" alt="Friends toasting with fresh juices on the Shtatto rooftop at sunset" width="500" height="640">
+      </div>
+      <div class="hero__seal" aria-hidden="true">
+        <svg viewBox="0 0 100 100">
+          <defs><path id="sealPath" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
+          <text><textPath href="#sealPath" data-i18n="hero.seal">· Steps from Place des Épices · Since the Medina ·</textPath></text>
+        </svg>
+        <svg class="seal__star" viewBox="0 0 100 100"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <a href="#story" class="hero__scroll" data-i18n-aria="hero.scroll" aria-label="Scroll to our story"><span></span></a>
+</section>
+
+<!-- ======= Marquee ======= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span data-i18n="marq.tajine">Tajine</span><i><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg></i><span data-i18n="marq.tea">Mint tea</span><i><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg></i><span data-i18n="marq.pastilla">Pastilla</span><i><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg></i><span data-i18n="marq.sunset">Rooftop sunsets</span><i><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg></i><span data-i18n="marq.juices">Fresh juices</span><i><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg></i><span data-i18n="marq.msemen">Msemen</span><i><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg></i><span data-i18n="marq.epices">Place des Épices</span><i><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg></i><span data-i18n="marq.concept">Concept store</span><i><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg></i>
+    <span data-i18n="marq.tajine">Tajine</span><i><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg></i><span data-i18n="marq.tea">Mint tea</span><i><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg></i><span data-i18n="marq.pastilla">Pastilla</span><i><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg></i><span data-i18n="marq.sunset">Rooftop sunsets</span><i><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg></i><span data-i18n="marq.juices">Fresh juices</span><i><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg></i><span data-i18n="marq.msemen">Msemen</span><i><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg></i><span data-i18n="marq.epices">Place des Épices</span><i><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg></i><span data-i18n="marq.concept">Concept store</span><i><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg></i>
+  </div>
+</div>
+
+<!-- ======= Story ======= -->
+<section class="story section" id="story">
+  <div class="sec-pattern" aria-hidden="true"></div>
+  <div class="container story__grid">
+    <div class="story__visual reveal">
+      <div class="arch arch--story">
+        <img src="assets/img/rooftop-moment.jpg" data-i18n-alt="story.alt" alt="Guest enjoying the view over the Marrakech Medina from the Shtatto rooftop" loading="lazy" width="480" height="600">
+      </div>
+      <div class="story__tile" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg>
+      </div>
+    </div>
+
+    <div class="story__body reveal">
+      <p class="eyebrow" data-i18n="story.eyebrow">Our story</p>
+      <h2 class="h2" data-i18n-html="story.h2">Where the Medina meets <em>good vibes</em></h2>
+      <div class="ornament" aria-hidden="true">
+        <svg viewBox="0 0 220 18"><path d="M0 9 H80 M140 9 H220" stroke="currentColor" stroke-width="1.4"/><path fill="currentColor" fill-rule="evenodd" d="M110 1A8 8 0 1 1 110 17A8 8 0 1 1 110 1ZM110 1L118 9L110 17L102 9Z"/><polygon points="90,4 95,9 90,14 85,9" fill="currentColor"/><polygon points="130,4 135,9 130,14 125,9" fill="currentColor"/></svg>
+      </div>
+      <p class="lead" data-i18n-html="story.lead">Shtatto' is the first concept store of Marrakech's Medina — a restaurant, a juice bar and a rooftop hideout rolled into one, a couple of steps away from the famous <strong>Place des Épices</strong>.</p>
+      <p data-i18n-html="story.p">Start the morning with a <em>Noss Noss</em> coffee and warm msemen, linger over a bowl of rainbow nachos at noon, then watch the sun go down over the rooftops with a rose lemonade in hand. Our kitchen cooks the classics the Moroccan way — tagines, pastilla, harira — with fresh market ingredients and a little touch of Shtatto.</p>
+
+      <ul class="features">
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <div><strong data-i18n="story.f1t">Rooftop with a view</strong><span data-i18n="story.f1s">Sunset over the Medina roofs</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20c2-6 6-9 8-9s6 3 8 9M12 11V4M9 7l3-3 3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><strong data-i18n="story.f2t">Fresh &amp; homemade</strong><span data-i18n="story.f2s">Hand-squeezed juices daily</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11h16M6 11V7a6 6 0 0112 0v4M5 11l1.5 9h11L19 11M10 15h4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><strong data-i18n="story.f3t">Tradition on a plate</strong><span data-i18n="story.f3s">Tagine, pastilla, harira &amp; more</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="11" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          <div><strong data-i18n="story.f4t">In the heart of the Medina</strong><span data-i18n="story.f4s">Steps from Place des Épices</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======= Stats ======= -->
+<section class="stats" aria-label="Shtatto in numbers">
+  <div class="sec-pattern" aria-hidden="true"></div>
+  <div class="container stats__grid">
+    <div class="stat reveal"><strong class="stat__n" data-i18n="stats.n1">27K+</strong><span class="stat__l" data-i18n="stats.l1">Instagram friends</span></div>
+    <div class="stat reveal"><strong class="stat__n" data-i18n="stats.n2">89</strong><span class="stat__l" data-i18n="stats.l2">dishes &amp; drinks</span></div>
+    <div class="stat reveal"><strong class="stat__n" data-i18n="stats.n3">7</strong><span class="stat__l" data-i18n="stats.l3">languages welcomed</span></div>
+    <div class="stat reveal"><strong class="stat__n" data-i18n="stats.n4">397</strong><span class="stat__l" data-i18n="stats.l4">moments on Instagram</span></div>
+  </div>
+</section>
+
+<!-- ======= Signature dishes ======= -->
+<section class="dishes section section--dark" id="dishes">
+  <div class="sec-pattern" aria-hidden="true"></div>
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow eyebrow--light" data-i18n="dish.eyebrow">From our kitchen</p>
+      <h2 class="h2 h2--light" data-i18n="dish.h2">Signature dishes</h2>
+      <div class="ornament ornament--light" aria-hidden="true">
+        <svg viewBox="0 0 220 18"><path d="M0 9 H80 M140 9 H220" stroke="currentColor" stroke-width="1.4"/><path fill="currentColor" fill-rule="evenodd" d="M110 1A8 8 0 1 1 110 17A8 8 0 1 1 110 1ZM110 1L118 9L110 17L102 9Z"/><polygon points="90,4 95,9 90,14 85,9" fill="currentColor"/><polygon points="130,4 135,9 130,14 125,9" fill="currentColor"/></svg>
+      </div>
+      <p class="section__sub section__sub--light" data-i18n="dish.sub">Fresh ingredients, Moroccan soul, and a little touch of Shtatto.</p>
+    </header>
+
+    <div class="dishes__grid">
+      <article class="dish-card reveal">
+        <div class="dish-card__img"><img src="assets/img/dish-pastilla.jpg" data-i18n-alt="dish.alt1" alt="Chicken pastilla with almonds and rose petals" loading="lazy" width="640" height="640"></div>
+        <div class="dish-card__body">
+          <h3 data-i18n="dish.c1n">Chicken Pastilla</h3>
+          <p data-i18n="dish.c1d">Chicken, almonds, onions &amp; Moroccan spices, wrapped in crispy phyllo dough.</p>
+          <span class="dish-card__price" data-i18n="dish.c1p">110 dh</span>
+        </div>
+      </article>
+
+      <article class="dish-card reveal">
+        <div class="dish-card__img"><img src="assets/img/dish-msemen.jpg" data-i18n-alt="dish.alt2" alt="Traditional Moroccan msemen rolls served with dip" loading="lazy" width="640" height="640"></div>
+        <div class="dish-card__body">
+          <h3 data-i18n="dish.c2n">Msemen, a little twist</h3>
+          <p data-i18n="dish.c2d">Traditional msemen with a little twist — a whole lot of flavor, made to share.</p>
+          <span class="dish-card__price" data-i18n="dish.c2p">on the breakfast menu</span>
+        </div>
+      </article>
+
+      <article class="dish-card reveal">
+        <div class="dish-card__img"><img src="assets/img/dish-meloui.jpg" data-i18n-alt="dish.alt3" alt="Moroccan meloui burger with minced meat, cheddar and caramelized onions" loading="lazy" width="480" height="600"></div>
+        <div class="dish-card__body">
+          <h3 data-i18n="dish.c3n">Meloui Street Burger</h3>
+          <p data-i18n="dish.c3d">Two layers of Moroccan meloui, minced meat, melted cheddar &amp; caramelized onions.</p>
+          <span class="dish-card__price" data-i18n="dish.c3p">street food, pure Moroccan soul</span>
+        </div>
+      </article>
+
+      <article class="dish-card reveal">
+        <div class="dish-card__img"><img src="assets/img/drink-rose-lemonade.jpg" data-i18n-alt="dish.alt4" alt="Rose lemonade with a rose petal on a stone table" loading="lazy" width="640" height="640"></div>
+        <div class="dish-card__body">
+          <h3 data-i18n="dish.c4n">Rose Lemonade</h3>
+          <p data-i18n="dish.c4d">Fresh lemon juice, rose syrup, grenadine &amp; sparkling water — finished with a rose petal.</p>
+          <span class="dish-card__price" data-i18n="dish.c4p">55 dh</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="dishes__more reveal">
+      <a href="#menu" class="btn btn--gold" data-i18n="dish.more">See the full menu</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======= Menu ======= -->
+<section class="menu section" id="menu">
+  <div class="menu__pattern" data-par="0.05" aria-hidden="true"></div>
+  <div class="container">
+    <header class="section__head reveal">
+      <svg class="head-mark" viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg>
+      <p class="eyebrow" data-i18n="menu.eyebrow">Carte / Menu</p>
+      <h2 class="h2" data-i18n-html="menu.h2">Eat, drink,<br><em>stay a while</em></h2>
+      <div class="ornament" aria-hidden="true">
+        <svg viewBox="0 0 220 18"><path d="M0 9 H80 M140 9 H220" stroke="currentColor" stroke-width="1.4"/><path fill="currentColor" fill-rule="evenodd" d="M110 1A8 8 0 1 1 110 17A8 8 0 1 1 110 1ZM110 1L118 9L110 17L102 9Z"/><polygon points="90,4 95,9 90,14 85,9" fill="currentColor"/><polygon points="130,4 135,9 130,14 125,9" fill="currentColor"/></svg>
+      </div>
+      <p class="section__sub" data-i18n-html="menu.sub">All prices in Moroccan Dirham (DH). <strong>Couscous every Friday.</strong></p>
+    </header>
+
+    <div class="menu__tabs reveal" role="tablist" aria-label="Menu categories">
+      <button class="tab is-active" role="tab" aria-selected="true" data-cat="all" data-i18n="menu.t0">All</button>
+      <button class="tab" role="tab" aria-selected="false" data-cat="tea,coffee" data-i18n="menu.t1">Tea &amp; coffee</button>
+      <button class="tab" role="tab" aria-selected="false" data-cat="juice" data-i18n="menu.t2">Fresh juices</button>
+      <button class="tab" role="tab" aria-selected="false" data-cat="mocktail" data-i18n="menu.t3">Mocktails</button>
+      <button class="tab" role="tab" aria-selected="false" data-cat="soda" data-i18n="menu.t4">Waters &amp; sodas</button>
+      <button class="tab" role="tab" aria-selected="false" data-cat="salad" data-i18n="menu.t5">Salads</button>
+      <button class="tab" role="tab" aria-selected="false" data-cat="sandwich,burger" data-i18n="menu.t6">Sandwiches &amp; burgers</button>
+      <button class="tab" role="tab" aria-selected="false" data-cat="omelette,nems" data-i18n="menu.t7">Omelette &amp; nems</button>
+      <button class="tab" role="tab" aria-selected="false" data-cat="plat" data-i18n="menu.t8">Plats</button>
+      <button class="tab" role="tab" aria-selected="false" data-cat="harira,tagine" data-i18n="menu.t9">Harira &amp; tagine</button>
+      <button class="tab" role="tab" aria-selected="false" data-cat="dessert" data-i18n="menu.t10">Desserts</button>
+    </div>
+
+    <div class="menu__grid" id="menuGrid">
+      <noscript><p>Please enable JavaScript to view the full menu.</p></noscript>
+    </div>
+
+    <div class="menu__foot reveal">
+      <p><span data-i18n="menu.wifi">Free WiFi — network</span> <code>shtatto81</code></p>
+      <button class="btn btn--ghost btn--dark" id="printMenu" type="button" data-i18n="menu.print">Print this menu</button>
+    </div>
+  </div>
+</section>
+
+<!-- ======= Gallery ======= -->
+<section class="gallery section section--dark" id="gallery">
+  <div class="sec-pattern" aria-hidden="true"></div>
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow eyebrow--light" data-i18n="gal.eyebrow">@shtattomarrakech</p>
+      <h2 class="h2 h2--light" data-i18n="gal.h2">Moments at Shtatto</h2>
+      <div class="ornament ornament--light" aria-hidden="true">
+        <svg viewBox="0 0 220 18"><path d="M0 9 H80 M140 9 H220" stroke="currentColor" stroke-width="1.4"/><path fill="currentColor" fill-rule="evenodd" d="M110 1A8 8 0 1 1 110 17A8 8 0 1 1 110 1ZM110 1L118 9L110 17L102 9Z"/><polygon points="90,4 95,9 90,14 85,9" fill="currentColor"/><polygon points="130,4 135,9 130,14 125,9" fill="currentColor"/></svg>
+      </div>
+      <p class="section__sub section__sub--light" data-i18n="gal.sub">Where the sunset meets good vibes. Follow us for the daily dose of the Medina.</p>
+    </header>
+
+    <div class="gallery__grid">
+      <button class="gallery__item gallery__item--tall reveal" data-src="assets/img/rooftop-sunset.jpg" data-cap="gal.cap1">
+        <img src="assets/img/rooftop-sunset.jpg" alt="Friends toasting with fresh juices at sunset on the rooftop" loading="lazy" width="500" height="640">
+      </button>
+      <button class="gallery__item reveal" data-src="assets/img/dish-salad.jpg" data-cap="gal.cap2">
+        <img src="assets/img/dish-salad.jpg" alt="Chicken salad bowl with apple slices and cherry tomatoes" loading="lazy" width="640" height="640">
+      </button>
+      <button class="gallery__item reveal" data-src="assets/img/dish-beetroot.jpg" data-cap="gal.cap3">
+        <img src="assets/img/dish-beetroot.jpg" alt="Beetroot salad with feta cheese and parsley" loading="lazy" width="480" height="600">
+      </button>
+      <button class="gallery__item reveal" data-src="assets/img/rooftop-guest.jpg" data-cap="gal.cap4">
+        <img src="assets/img/rooftop-guest.jpg" alt="Guest relaxing on the rooftop terrace among the palms" loading="lazy" width="480" height="600">
+      </button>
+      <button class="gallery__item gallery__item--wide reveal" data-src="assets/img/dish-msemen.jpg" data-cap="gal.cap5">
+        <img src="assets/img/dish-msemen.jpg" alt="Traditional msemen rolls with dip and roasted potatoes" loading="lazy" width="640" height="640">
+      </button>
+      <button class="gallery__item reveal" data-src="assets/img/drink-iced-coffee.jpg" data-cap="gal.cap6">
+        <img src="assets/img/drink-iced-coffee.jpg" alt="Iced coffee with cream in a glass with a Shtatto straw" loading="lazy" width="640" height="640">
+      </button>
+      <button class="gallery__item reveal" data-src="assets/img/dish-pastilla.jpg" data-cap="gal.cap7">
+        <img src="assets/img/dish-pastilla.jpg" alt="Chicken pastilla on a dark plate with rose petals and almonds" loading="lazy" width="640" height="640">
+      </button>
+      <button class="gallery__item reveal" data-src="assets/img/rooftop-moment.jpg" data-cap="gal.cap8">
+        <img src="assets/img/rooftop-moment.jpg" alt="Guest taking a selfie with the Koutoubia and the Medina rooftops" loading="lazy" width="480" height="600">
+      </button>
+      <button class="gallery__item reveal" data-src="assets/img/rooftop-friends.jpg" data-cap="gal.cap9">
+        <img src="assets/img/rooftop-friends.jpg" alt="Three friends taking a selfie on the rooftop with the Koutoubia behind them" loading="lazy" width="480" height="600">
+      </button>
+      <button class="gallery__item gallery__item--tall reveal" data-src="assets/img/dish-meloui.jpg" data-cap="gal.cap10">
+        <img src="assets/img/dish-meloui.jpg" alt="Moroccan meloui burger with melted cheddar and potatoes" loading="lazy" width="480" height="600">
+      </button>
+      <button class="gallery__item reveal" data-src="assets/img/dish-nems.jpg" data-cap="gal.cap11">
+        <img src="assets/img/dish-nems.jpg" alt="Golden crispy nems triangles with a dipping sauce" loading="lazy" width="640" height="640">
+      </button>
+      <button class="gallery__item reveal" data-src="assets/img/drink-rose-lemonade.jpg" data-cap="gal.cap12">
+        <img src="assets/img/drink-rose-lemonade.jpg" alt="Rose lemonade glowing in the afternoon sun" loading="lazy" width="640" height="640">
+      </button>
+    </div>
+
+    <div class="gallery__more reveal">
+      <a class="btn btn--gold" href="https://www.instagram.com/shtattomarrakech/" target="_blank" rel="noopener" data-i18n="gal.follow">Follow @shtattomarrakech</a>
+      <span class="gallery__count" data-i18n="gal.count">27K+ friends already there</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======= Visit / Reserve ======= -->
+<section class="visit section" id="visit">
+  <div class="sec-pattern" aria-hidden="true"></div>
+  <div class="container visit__grid">
+    <div class="visit__body reveal">
+      <p class="eyebrow" data-i18n="visit.eyebrow">Visit us</p>
+      <h2 class="h2" data-i18n-html="visit.h2">Find us in<br>the <em>Medina</em></h2>
+      <div class="ornament" aria-hidden="true">
+        <svg viewBox="0 0 220 18"><path d="M0 9 H80 M140 9 H220" stroke="currentColor" stroke-width="1.4"/><path fill="currentColor" fill-rule="evenodd" d="M110 1A8 8 0 1 1 110 17A8 8 0 1 1 110 1ZM110 1L118 9L110 17L102 9Z"/><polygon points="90,4 95,9 90,14 85,9" fill="currentColor"/><polygon points="130,4 135,9 130,14 125,9" fill="currentColor"/></svg>
+      </div>
+
+      <ul class="visit__list">
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="11" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          <div><strong data-i18n="visit.l1t">A couple of steps from the Place des Épices</strong><span data-i18n="visit.l1s">Medina of Marrakech, Morocco</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4 9h16M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <div><strong data-i18n="visit.l2t">Open every day</strong><span data-i18n-html="visit.l2s">Kitchen &amp; rooftop from morning to night — see <a href="https://www.instagram.com/shtattomarrakech/" target="_blank" rel="noopener">Instagram</a> for today's hours</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5a10 10 0 0114 0M8 16a6 6 0 018 0M11.2 19.3a1.5 1.5 0 011.6 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="21.5" r="0.8" fill="currentColor"/></svg>
+          <div><strong data-i18n="visit.l3t">WiFi — shtatto81</strong><span data-i18n="visit.l3s">Free for all our guests</span></div>
+        </li>
+      </ul>
+
+      <div class="visit__actions">
+        <a href="https://booking.shtattomarrakech.com/reservation" target="_blank" rel="noopener" class="btn btn--solid" data-i18n="visit.b1">Reserve your table</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Shtatto+Marrakech+Medina" target="_blank" rel="noopener" class="btn btn--ghost btn--dark" data-i18n="visit.b2">Get directions</a>
+      </div>
+
+      <blockquote class="visit__quote">
+        <p data-i18n="visit.quote">“SHTATTO, a first concept store of Marrakech's Medina — a couple of steps away from the Place des Épices!”</p>
+        <cite data-i18n="visit.cite">— @shtattomarrakech</cite>
+      </blockquote>
+    </div>
+
+    <div class="visit__map reveal">
+      <iframe
+        data-i18n-title="visit.alt"
+        title="Map showing Shtatto in the Medina of Marrakech"
+        src="https://www.google.com/maps?q=Place%20des%20%C3%89pices%2C%20Medina%2C%20Marrakech&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <div class="visit__map-card">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/></svg>
+        <div><strong>Shtatto'&#8206;</strong><span data-i18n="hero.kicker">Medina · Marrakech</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= Reserve band ======= -->
+<section class="band">
+  <div class="band__pattern" data-par="0.07" aria-hidden="true"></div>
+  <div class="container band__inner reveal">
+    <p class="band__arabic" lang="ar" dir="rtl">أهلاً بكم</p>
+    <h2 class="band__title" data-i18n="band.h2">Your table is waiting</h2>
+    <p class="band__sub" data-i18n="band.sub">Breakfast, lunch, sunset drinks or dinner — book online in under a minute.</p>
+    <a href="https://booking.shtattomarrakech.com/reservation" target="_blank" rel="noopener" class="btn btn--solid btn--big" data-i18n="band.btn">Reserve a table</a>
+  </div>
+</section>
+
+<!-- ======= Footer ======= -->
+<footer class="footer">
+  <div class="sec-pattern" aria-hidden="true"></div>
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="#top" class="brand brand--footer" aria-label="Back to top">
+        <svg class="brand__mark" viewBox="0 0 100 100" aria-hidden="true">
+          <path fill="currentColor" fill-rule="evenodd" d="M50 2A48 48 0 0 1 50 98A48 48 0 0 1 50 2ZM50 2L98 50L50 98L2 50Z"/>
+        </svg>
+        <span class="brand__word">Shtatto<em>'&#8206;</em></span>
+      </a>
+      <p data-i18n="foot.blurb">A first concept store of Marrakech's Medina — restaurant, juice bar &amp; rooftop, steps from the Place des Épices.</p>
+    </div>
+
+    <nav class="footer__nav" aria-label="Footer">
+      <h3 data-i18n="foot.h1">Explore</h3>
+      <a href="#story" data-i18n="nav.story">Our story</a>
+      <a href="#dishes" data-i18n="nav.dishes">Signature dishes</a>
+      <a href="#menu" data-i18n="nav.menu">Menu</a>
+      <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+      <a href="#visit" data-i18n="nav.visit">Visit us</a>
+    </nav>
+
+    <div class="footer__contact">
+      <h3 data-i18n="foot.h2">Good to know</h3>
+      <a href="https://booking.shtattomarrakech.com/reservation" target="_blank" rel="noopener" data-i18n="foot.res">Reservations</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Shtatto+Marrakech+Medina" target="_blank" rel="noopener" data-i18n="foot.dir">Directions</a>
+      <span data-i18n="foot.wifi">WiFi: shtatto81</span>
+      <span data-i18n="foot.fri">Couscous every Friday</span>
+    </div>
+
+    <div class="footer__social">
+      <h3 data-i18n="foot.h3">Follow</h3>
+      <a href="https://www.instagram.com/shtattomarrakech/" target="_blank" rel="noopener" class="footer__ig">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg>
+        <span data-i18n="foot.ig">@shtattomarrakech</span>
+      </a>
+      <span data-i18n="foot.followers">27K+ followers</span>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p data-i18n="foot.copy">© 2026 Shtatto' Marrakech. All rights reserved.</p>
+    <p lang="ar" dir="rtl">شكراً على زيارتكم</p>
+  </div>
+</footer>
+
+<!-- ======= Lightbox ======= -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" data-i18n-aria="ui.lightbox" aria-label="Photo viewer" hidden>
+  <button class="lightbox__close" id="lbClose" data-i18n-aria="ui.close" aria-label="Close">✕</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" data-i18n-aria="ui.prev" aria-label="Previous photo">‹</button>
+  <figure class="lightbox__figure">
+    <img id="lbImg" src="" alt="">
+    <figcaption id="lbCaption"></figcaption>
+  </figure>
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" data-i18n-aria="ui.next" aria-label="Next photo">›</button>
+</div>
+
+<script src="js/i18n.js"></script>
+<script src="js/menu-data.js"></script>
+<script src="js/main.js"></script>
+<script>setTimeout(function(){var p=document.getElementById('preloader');if(p)p.classList.add('is-done');document.body&&document.body.classList.add('is-ready');},3000);</script>
+</body>
+</html>
