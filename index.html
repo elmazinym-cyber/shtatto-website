@@ -29,7 +29,7 @@
     "addressLocality": "Medina, Marrakech",
     "addressCountry": "MA"
   },
-  "url": "https://booking.shtattomarrakech.com/reservation",
+  "url": "https://jbujb.ma/en/reservations/book/68ef803e39e16294d3a23dc5",
   "sameAs": ["https://www.instagram.com/shtattomarrakech/"]
 }
 </script>
@@ -65,7 +65,7 @@
       <a href="#menu" class="nav__link" data-i18n="nav.menu">Menu</a>
       <a href="#gallery" class="nav__link" data-i18n="nav.gallery">Gallery</a>
       <a href="#visit" class="nav__link" data-i18n="nav.visit">Visit us</a>
-      <a href="https://booking.shtattomarrakech.com/reservation" target="_blank" rel="noopener" class="btn btn--small nav__cta" data-i18n="nav.reserve">Reserve a table</a>
+      <a href="#book" class="btn btn--small nav__cta" data-i18n="nav.reserve">Reserve a table</a>
     </nav>
 
     <div class="header__actions">
@@ -96,7 +96,7 @@
       <h1 class="hero__title">Shtatto<em>'&#8206;</em></h1>
       <p class="hero__tagline" data-i18n-html="hero.tagline">A first concept store of Marrakech's Medina — a couple of steps away from the <strong>Place des Épices</strong>. Traditional Moroccan soul, fresh ingredients, and rooftop sunsets.</p>
       <div class="hero__actions">
-        <a href="https://booking.shtattomarrakech.com/reservation" target="_blank" rel="noopener" class="btn btn--solid" data-i18n="hero.cta1">Reserve a table</a>
+        <a href="#book" class="btn btn--solid" data-i18n="hero.cta1">Reserve a table</a>
         <a href="#menu" class="btn btn--ghost" data-i18n="hero.cta2">Explore the menu</a>
       </div>
       <ul class="hero__badges" aria-label="Highlights">
@@ -368,7 +368,7 @@
       </ul>
 
       <div class="visit__actions">
-        <a href="https://booking.shtattomarrakech.com/reservation" target="_blank" rel="noopener" class="btn btn--solid" data-i18n="visit.b1">Reserve your table</a>
+        <a href="#book" class="btn btn--solid" data-i18n="visit.b1">Reserve your table</a>
         <a href="https://www.google.com/maps/search/?api=1&query=Shtatto+Marrakech+Medina" target="_blank" rel="noopener" class="btn btn--ghost btn--dark" data-i18n="visit.b2">Get directions</a>
       </div>
 
@@ -399,7 +399,9 @@
     <p class="band__arabic" lang="ar" dir="rtl">أهلاً بكم</p>
     <h2 class="band__title" data-i18n="band.h2">Your table is waiting</h2>
     <p class="band__sub" data-i18n="band.sub">Breakfast, lunch, sunset drinks or dinner — book online in under a minute.</p>
-    <a href="https://booking.shtattomarrakech.com/reservation" target="_blank" rel="noopener" class="btn btn--solid btn--big" data-i18n="band.btn">Reserve a table</a>
+    <!-- JBUJB reservation widget -->
+    <div class="book-widget" id="book" data-jbujb-widget="reservation" data-business="68ef803e39e16294d3a23dc5" data-lang="auto"></div>
+    <script src="https://jbujb.ma/widget.js" async></script>
   </div>
 </section>
 
@@ -428,7 +430,7 @@
 
     <div class="footer__contact">
       <h3 data-i18n="foot.h2">Good to know</h3>
-      <a href="https://booking.shtattomarrakech.com/reservation" target="_blank" rel="noopener" data-i18n="foot.res">Reservations</a>
+      <a href="#book" data-i18n="foot.res">Reservations</a>
       <a href="https://www.google.com/maps/search/?api=1&query=Shtatto+Marrakech+Medina" target="_blank" rel="noopener" data-i18n="foot.dir">Directions</a>
       <span data-i18n="foot.wifi">WiFi: shtatto81</span>
       <span data-i18n="foot.fri">Couscous every Friday</span>

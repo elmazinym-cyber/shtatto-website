@@ -88,6 +88,17 @@
     if (label) label.textContent = code.toUpperCase();
     const flagEl = $('#langFlag');
     if (flagEl) flagEl.innerHTML = FLAG_SVG[code] || '';
+
+    /* JBUJB reservation widget follows the site language (no Russian → English) */
+    const jbHost = $('.book-widget');
+    if (jbHost) {
+      jbHost.setAttribute('data-lang', code === 'ru' ? 'en' : code);
+      if (window.JBUJB && jbHost.getAttribute('data-jbujb-mounted') === '1') {
+        jbHost.removeAttribute('data-jbujb-mounted');
+        jbHost.innerHTML = '';
+        window.JBUJB.refresh();
+      }
+    }
     $$('.lang__opt').forEach(function (b) {
       b.classList.toggle('is-active', b.getAttribute('data-lang') === code);
     });

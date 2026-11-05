@@ -432,6 +432,14 @@ ul { margin: 0; padding: 0; list-style: none; }
 .band .btn--solid { background: var(--ink); box-shadow: 0 16px 36px -16px rgba(0,0,0,.7); }
 .band .btn--solid:hover { background: #17100a; }
 
+/* ---------- JBUJB reservation widget ---------- */
+.book-widget {
+  max-width: 760px; min-height: 320px; margin: 0 auto;
+  background: #fff; border-radius: 22px; overflow: hidden;
+  box-shadow: 0 34px 80px -24px rgba(0,0,0,.55);
+}
+.book-widget iframe { display: block; width: 100%; border: 0; }
+
 /* ---------- Footer ---------- */
 .footer { background: var(--ink); color: rgba(255,250,242,.8); padding-top: clamp(56px, 6vw, 80px); }
 .footer__grid {

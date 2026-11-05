@@ -69,7 +69,9 @@ The site ships in **7 languages**: English, Français, العربية, Español,
 
 ## Key links
 
-- Reservations: https://booking.shtattomarrakech.com/reservation
+- Reservations: embedded **JBUJB reservation widget** in the booking band (anchor `#book` —
+  business `68ef803e39e16294d3a23dc5`, loaded from https://jbujb.ma/widget.js). All “Reserve”
+  buttons scroll to it; its language follows the site language (RU falls back to EN).
 - Instagram: https://www.instagram.com/shtattomarrakech/
 - WiFi network for guests: `shtatto81`
 - Menu: couscous every Friday · prices in Moroccan Dirham (DH)
