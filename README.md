@@ -13,6 +13,15 @@ npx http-server . -p 8096
 
 Any static file server works — there is no build step.
 
+## Live
+
+- **Production site**: https://shtatto-website.vercel.app
+- **Repository**: https://github.com/elmazinym-cyber/shtatto-website (public)
+
+The repository is connected to Vercel, so **every push to `main` auto-deploys** to production.
+Re-link any time with `vercel git connect --project shtatto-website`; deploy manually with
+`vercel deploy --prod`.
+
 ## What's inside
 
 | File | Purpose |
